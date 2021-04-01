@@ -6,9 +6,13 @@ void sum_array2(int *array, int n, int *output);
 void sum_array3(int *array, int n, int &output);
 
 int main(int argc, char *argv[]){
+    
     int n = atoi(argv[1]);
+
     n = (n<1)? 1 : n;
+    
     n = (n>10)? 10 : n;
+
 
     int a[10];
     if (!a) {cout << "allocation failed.\n"; return -1;}
