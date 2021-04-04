@@ -43,5 +43,9 @@ int **makeArray2D (int *sz){
 }
 
 void destroyArray2D(int **arr, int *sz){
+    int n1 = sz[0];
+    for (int i=0; i<n1; i++){
+        delete[] arr[i];
+    }
     delete[] arr;
 }
