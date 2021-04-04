@@ -8,7 +8,7 @@ int **makeArray2D(int *sz);
 void destroyArray2D(int **arr, int *sz);
 
 int main(int argc, char *argv[]){
-    if(argc <2){
+    if(argc <3){
         cout << "usage : ./str  1d 2d 3d... nd\n";
         return -1;
     }
