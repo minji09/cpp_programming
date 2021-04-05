@@ -61,7 +61,7 @@ void destroyArray3D(int ***arr, int *sz){
     for (int i=0; i<n1; i++){
         for(int j=0; j<n2;j++)
             delete[] arr[i][j];
-        
+        delete[] arr[i];
     }
     delete[] arr;
 }
