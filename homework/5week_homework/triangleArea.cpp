@@ -2,6 +2,9 @@
 #include <cmath>
 using namespace std;
 
+/*삼각형면적구하기 + 
+삼각형 면적 양수(반시계) : 1 / 음수(시계) : -1 / 0 : 0
+*/
 
 int main(){
     int ax, ay, bx, by, cx, cy;
