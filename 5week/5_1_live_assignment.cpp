@@ -9,7 +9,7 @@ int main(int argc, char *argv[]){
     
     int n = atoi(argv[1]);
 
-    n = (n<1)? 1 : n;
+    n = (n<1)? 1 : n; //삼항연산자 '조건'? 'a'  if true : 'b' if false
     
     n = (n>10)? 10 : n;
 
