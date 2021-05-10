@@ -3,11 +3,14 @@ using namespace std;
 
 int main(){
 
-    for (int i = 0; i<4; i++){
-        if(i%2) continue;
-        else cout << i <<endl;
-    }
-    
+   enum A {D,C,B};
+   A a;
 
-    return 0;
+   a =B;
+   int b = B;
+   double k = 0e0;
+   cout << a << " " << b << " "<< k;
+   cout << sizeof(short int);
+
+
 }

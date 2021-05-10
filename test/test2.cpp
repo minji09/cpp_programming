@@ -1,33 +1,43 @@
 #include <iostream>
-#include <vector>
-#include <cmath>
-#include <algorithm>
 using namespace std;
 
+void draw(int i, int row);
 
-int main(){
+int main()
+{
+  int row;
+  int k;
 
-    int n;
-    cin >> n;
-    vector<unsigned int> v = {1,2,3,5};
-	vector<int> s = {2,3,5};
+  cin >> row;
 
+  for (int i = 0; i < row; i++)
+  {
+    if (i * 2 < row)
+      draw(i, row);
+    else
+    {
+      k = row - i - 1;
+      draw(k, row);
+    }
+  }
 
-	unsigned int k=0;
-	while(v.size()<=5000){
-		int m = v.size();
-		for (int i = 0; i<m; i++){
-			for (int j = 0; j<3; j++){
-				k = v[i]*s[j];
-				v.push_back(k);
-			}
-		}
-		sort(v.begin(),v.end());
-		v.erase(unique(v.begin(),v.end()),v.end());
+  return 0;
+}
 
-	}
-	cout <<v[n-1];
-	
+void draw(int i, int row)
+{
+  {
+    for (int j = 0; j < i; j++)
+      cout << "-";
 
-    return 0;
+    for (int j = 0; j < row - i * 2; j++)
+      if (j % 2 == 0)
+        cout << "*";
+      else
+        cout << "+";
+
+    // for (int j = 0; j < i; j++)
+    //   cout << "-";
+    cout << endl;
+  }
 }
